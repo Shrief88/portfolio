@@ -5,19 +5,21 @@ import Experience from "@/sections/Experience";
 import Work from "@/sections/Work";
 import Contact from "@/sections/Contact";
 import Footer from "@/components/Footer";
+import Links from "@/components/Links";
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="px-8 mt-[var(--nav-height)]">
+      <Links />
+      <main className="max-w-[1600px] px-[150px] flex-1 mx-auto">
         <Hero />
-        <About />
+        {/* <About />
         <Experience />
         <Work />
-        <Contact />
+        <Contact /> */}
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

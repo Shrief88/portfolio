@@ -46,19 +46,19 @@
 }
 
 :root {
-  --radius: 0.625rem;
   --background: oklch(21.36% 0.0483 257.95);
-  --foreground: oklch(0.922 0 0);
+  --secondary: oklch(25.52% 0.0612 260.93);
+  --foreground: oklch(90.77% 0.1414 174.34);
+  --muted-foreground: oklch(66.24% 0.0461 270.63);
+  --primary-foreground: oklch(87.86% 0.0455 271.71);
+  --secondary-foreground: oklch(66.24% 0.0461 270.63);
+  --radius: 0.625rem;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
   --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
   --accent: oklch(0.97 0 0);
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);
@@ -121,6 +121,13 @@
   body {
     @apply bg-background text-foreground;
   }
+  h1{
+    @apply font-inter p-0;
+  }
+
+  p{
+    @apply font-inter p-0;
+  }
 }
 
 @layer components {
@@ -131,7 +138,7 @@
   .underline-animation::after {
     content: "";
     @apply absolute w-full h-0.5 left-0 bottom-[-4px] bg-foreground scale-x-0 
-    origin-bottom-right transition-transform duration-500 ease-in-out;
+      origin-bottom-right transition-transform duration-500 ease-in-out;
   }
 
   .underline-animation:hover::after {
@@ -139,3 +146,26 @@
   }
 }
 
+
+@theme {
+  --animate-move-up: move-up 0.3s ease-in-out forwards;
+  --animate-move-down: move-down 0.3s ease-in-out forwards;
+
+  @keyframes move-up {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-5px);
+    }
+  }
+
+  @keyframes move-down {
+    0% {
+      transform: translateY(-5px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
