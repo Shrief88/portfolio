@@ -21,7 +21,7 @@ const SocialLinks = [
 
 const Links = () => {
   return (
-    <div className="fixed w-10 left-10 bottom-0">
+    <div className="fixed w-10 left-10 bottom-0 hidden md:block">
       <div className="flex flex-col justify-center items-center gap-7">
         {SocialLinks.map((link) => (
           <a
