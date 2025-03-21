@@ -32,8 +32,11 @@ const Navbar = () => {
         <Button
           variant={"outline"}
           className="cursor-pointer text-xs font-fira text-foreground"
+          asChild
         >
-          Resume
+          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+            Resume
+          </a>
         </Button>
       </div>
     </nav>
