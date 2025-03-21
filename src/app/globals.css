@@ -43,6 +43,7 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --color-separator: var(--separator); 
 }
 
 :root {
@@ -52,6 +53,7 @@
   --muted-foreground: oklch(66.24% 0.0461 270.63);
   --primary-foreground: oklch(87.86% 0.0455 271.71);
   --secondary-foreground: oklch(66.24% 0.0461 270.63);
+  --separator: oklch(32.94% 0.0601 260.77); 
   --radius: 0.625rem;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
@@ -122,7 +124,7 @@
     @apply bg-background text-foreground;
   }
   h1{
-    @apply font-inter p-0;
+    @apply font-inter p-0 leading-none;
   }
 
   p{
@@ -143,6 +145,20 @@
 
   .underline-animation:hover::after {
     @apply scale-x-100 origin-bottom-left;
+  }
+
+  .section-heading {
+    @apply flex items-end text-primary-foreground text-[22px] md:text-[27px] font-bold whitespace-nowrap leading-5 md:leading-6
+  }
+
+  .section-heading::before {
+    @apply text-foreground font-fira text-[16px] md:text-xl mr-2 leading-none font-light;
+    content: attr(data-section-number);
+  }
+
+  .section-heading::after {
+    @apply inline-block h-0.25 w-full md:w-[300px] bg-separator ml-4 self-center;
+    content: "";
   }
 }
 

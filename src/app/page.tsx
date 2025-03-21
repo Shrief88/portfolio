@@ -1,10 +1,10 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/sections/Hero";
 import About from "@/sections/About";
-import Experience from "@/sections/Experience";
-import Work from "@/sections/Work";
-import Contact from "@/sections/Contact";
-import Footer from "@/components/Footer";
+// import Experience from "@/sections/Experience";
+// import Work from "@/sections/Work";
+// import Contact from "@/sections/Contact";
+// import Footer from "@/components/Footer";
 import Links from "@/components/Links";
 
 export default function Home() {
@@ -12,14 +12,11 @@ export default function Home() {
     <>
       <Navbar />
       <Links />
-      <main className="max-w-[1600px] px-[150px] flex-1 mx-auto">
+      <main>
         <Hero />
-        {/* <About />
-        <Experience />
-        <Work />
-        <Contact /> */}
+
+        <About />
       </main>
-      {/* <Footer /> */}
     </>
   );
 }

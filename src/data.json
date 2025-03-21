@@ -16,6 +16,21 @@
   "hero": {
     "name": "Sherif Essam",
     "title": "I build things for the web",
-    "description": "I’m Software engineer with +2 years of professional experience in the software industry, specializing in front-end development with TypeScript, React, Node.js, and AWS. Skilled in building scalable, high-performance web applications and passionate about solving complex technical challenges and delivering high-quality software solutions."
-  }
+    "description": "I’m Software engineer with +2 years of professional experience in the software industry, specializing in front-end development."
+  },
+  "skills": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "React Native",
+    "Redux",
+    "TanStack",
+    "Tailwind CSS",
+    "React Testing Library",
+    "Git",
+    "AWS",
+    "Node.js"
+  ]
 }

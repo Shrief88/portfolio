@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <nav
       className={cn(
-        "px-8 fixed top-0 left-0 w-full bg-background transition-transform",
+        "px-8 fixed top-0 left-0 w-full bg-background transition-transform hidden md:block",
         show ? "translate-y-0" : "-translate-y-full",
         shouldHasShadow
           ? "drop-shadow-lg shadow-gray-900/50 backdrop-blur-md"
