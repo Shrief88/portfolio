@@ -3,19 +3,20 @@ import Hero from "@/sections/Hero";
 import About from "@/sections/About";
 // import Experience from "@/sections/Experience";
 // import Work from "@/sections/Work";
-// import Contact from "@/sections/Contact";
+  import Contact from "@/sections/Contact";
 // import Footer from "@/components/Footer";
-import Links from "@/components/Links";
+import SideLinks from "@/components/SideLinks";
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <Links />
+      <SideLinks />
       <main>
         <Hero />
 
         <About />
+        <Contact />
       </main>
     </>
   );

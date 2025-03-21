@@ -1,9 +1,32 @@
+import MaxWidthWrapper from "@/components/MaxWidthWrapper";
+import { Button } from "@/components/ui/button";
+import { links } from "@/data.json";
+
 const Contact = () => {
   return (
-    <section className="h-64" id="contact">
-      <h2>Contact</h2>
-    </section>
+    <MaxWidthWrapper>
+      <section className="max-w-[1000px] flex flex-col pb-40" id="contact">
+        <div className="flex flex-col mt-10 justify-center items-center gap-4">
+          <p className="font-fira text-foreground">4. What’s Next?</p>
+          <h1 className="text-primary-foreground text-4xl md:text-[60px] font-bold">
+            Get In Touch
+          </h1>
+          <p className="text-muted-foreground text-center max-w-[600px]">
+            My inbox is always open! Whether you have a collaboration
+            opportunity, a question, or just want to say hi, I will do my best
+            to get back to you.
+          </p>
+          <Button
+            variant={"outline"}
+            className="cursor-pointer text-sm font-fira text-foreground mt-5"
+            asChild
+          >
+            <a href={`mailto:${links.Email.href}`}>Say Hello</a>
+          </Button>
+        </div>
+      </section>
+    </MaxWidthWrapper>
   );
 };
 
-export default Contact
+export default Contact;
