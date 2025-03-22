@@ -1,9 +1,9 @@
 import Navbar from "@/components/Navbar";
-import Hero from "@/sections/Hero";
-import About from "@/sections/About";
+import Hero from "@/components/sections/Hero";
+import About from "@/components/sections/About";
 // import Experience from "@/sections/Experience";
 // import Work from "@/sections/Work";
-  import Contact from "@/sections/Contact";
+  import Contact from "@/components/sections/Contact";
 // import Footer from "@/components/Footer";
 import SideLinks from "@/components/SideLinks";
 

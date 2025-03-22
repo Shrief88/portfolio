@@ -1,5 +1,5 @@
 import { Linkedin, Github, MailIcon } from "lucide-react";
-import { links } from "@/data.json";
+import { links } from "@/content/data.json";
 import { cn } from "@/lib/utils";
 
 type Props = {

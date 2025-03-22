@@ -1,4 +1,4 @@
-import { hero } from "@/data.json";
+import { hero } from "@/content/data.json";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 
 const Hero = () => {

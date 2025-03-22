@@ -1,6 +1,6 @@
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { Badge } from "@/components/ui/badge";
-import { skills } from "@/data.json";
+import { skills } from "@/content/data.json";
 
 const About = () => {
   return (

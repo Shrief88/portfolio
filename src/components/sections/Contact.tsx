@@ -1,6 +1,6 @@
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { Button } from "@/components/ui/button";
-import { links } from "@/data.json";
+import { links } from "@/content/data.json";
 
 const Contact = () => {
   return (
