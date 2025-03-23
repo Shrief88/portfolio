@@ -5,7 +5,7 @@ import { links } from "@/content/data.json";
 const Contact = () => {
   return (
     <MaxWidthWrapper>
-      <section className="max-w-[1000px] flex flex-col pb-40" id="contact">
+      <section className="max-w-[1000px] flex flex-col py-20" id="contact">
         <div className="flex flex-col mt-10 justify-center items-center gap-4">
           <p className="font-fira text-foreground">4. What’s Next?</p>
           <h1 className="text-primary-foreground text-4xl md:text-[60px] font-bold">

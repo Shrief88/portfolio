@@ -6,14 +6,14 @@ const About = () => {
   return (
     <MaxWidthWrapper>
       <section
-        className="max-w-[1000px] flex flex-col justify-center pb-40"
+        className="max-w-[1000px] flex flex-col justify-center py-24"
         id="about"
       >
         <h1 className="section-heading" data-section-number="01.">
           About Me
         </h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-5 pb-20">
           <div className="md:col-span-3 flex flex-col gap-6 mt-10">
             <p className="text-muted-foreground">
               Hello! My name is Sherif and I enjoy creating things that live on
