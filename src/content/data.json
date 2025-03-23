@@ -32,5 +32,42 @@
     "Git",
     "AWS",
     "Node.js"
-  ]
+  ],
+  "experiences": {
+    "C M Cherry Consulting": {
+      "title": "Full-Stack Developer",
+      "companyUrl": "",
+      "startDate": "Feb 2024",
+      "endDate": "Current",
+      "description": [
+        "Handled the authentication flow with Amazon Cognito",
+        "Built a user-friendly, dynamic form for data input required in biological analysis",
+        "Developed a robust, feature-rich table component with full CRUD functionality.",
+        "Created an interactive tool for designing and executing biological analysis through visual diagrams.",
+        "Integrated the application with AWS services like DynamoDB and S3 via Lambda functions.",
+        "Implemented unit and integration tests with Vitest, increasing automation and code coverage for higher software reliability.",
+        "Utilized libraries and tools such as Redux, Mantine, TanStack Table, React Flow, and Vitest."
+      ]
+    },
+    "Al Zaeem Development Training": {
+      "title": "Full-Stack Developer",
+      "companyUrl": "",
+      "startDate": "Feb 2024",
+      "endDate": "Current",
+      "description": [
+        "Designed and delivered comprehensive training sessions in JavaScript, HTML, CSS.",
+        "Mentored and graduated over 30 students, equipping them with strong foundational programming skills."
+      ]
+    },
+    "LaFamila Egypt": {
+      "title": "Full-Stack Developer",
+      "companyUrl": "",
+      "startDate": "Feb 2024",
+      "endDate": "Current",
+      "description": [
+        "Designed promotional materials, including flyers and frames, using Adobe Photoshop and Illustrator to meet client requirements.",
+        "Delivered creative visuals that increased customer engagement by 20%."
+      ]
+    }
+  }
 }

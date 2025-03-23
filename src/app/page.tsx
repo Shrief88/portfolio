@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
-// import Experience from "@/sections/Experience";
+import Experience from "@/components/sections/Experience";
 // import Work from "@/sections/Work";
   import Contact from "@/components/sections/Contact";
 // import Footer from "@/components/Footer";
@@ -14,8 +14,8 @@ export default function Home() {
       <SideLinks />
       <main>
         <Hero />
-
         <About />
+        <Experience />
         <Contact />
       </main>
     </>
