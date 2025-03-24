@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 import { hero } from "@/content/data.json";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 
@@ -5,16 +9,40 @@ const Hero = () => {
   return (
     <MaxWidthWrapper className="min-h-screen">
       <section className="flex flex-col justify-center items-start gap-6 max-w-[1000px] w-full">
-        <p className="font-fira text-foreground">Hi, my name is</p>
+        <motion.p
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 1, duration: 0.3 }}
+          className="font-fira text-foreground"
+        >
+          Hi, my name is
+        </motion.p>
         <div className="flex flex-col gap-1">
-          <h1 className="text-primary-foreground text-4xl md:text-[80px] font-bold">
+          <motion.h1
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 1.2, duration: 0.3 }}
+            className="text-primary-foreground text-4xl md:text-[80px] font-bold"
+          >
             {hero.name}
-          </h1>
-          <h1 className="text-secondary-foreground text-[60px] font-bold hidden md:block">
+          </motion.h1>
+          <motion.h1
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 1.4, duration: 0.3 }}
+            className="text-secondary-foreground text-[60px] font-bold hidden md:block"
+          >
             {hero.title}
-          </h1>
+          </motion.h1>
         </div>
-        <p className="text-muted-foreground max-w-[600px]">{hero.description}</p>
+        <motion.p
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 1.6, duration: 0.3 }}
+          className="text-muted-foreground max-w-[600px]"
+        >
+          {hero.description}
+        </motion.p>
       </section>
     </MaxWidthWrapper>
   );

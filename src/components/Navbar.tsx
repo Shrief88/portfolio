@@ -1,11 +1,13 @@
 "use client";
 
 import Link from "next/link";
+import { motion } from "framer-motion";
+
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
-
 import useScroll from "@/hooks/useScroll";
 import MobileNav from "./MobileNav";
+
 
 const links = ["About", "Experience", "Work", "Contact"];
 
@@ -28,20 +30,31 @@ const Navbar = () => {
       <div className="h-[var(--nav-height)] hidden md:flex items-center justify-end gap-8">
         {links.map((link, index) => (
           <Link key={link} href={`#${link.toLowerCase()}`}>
-            <p className="underline-animation text-xs font-fira text-foreground">
+            <motion.p
+              initial={{ y: -30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.3 + index * 0.1 }}
+              className="underline-animation text-xs font-fira text-foreground"
+            >
               {`0${index + 1}.` + " " + link}
-            </p>
+            </motion.p>
           </Link>
         ))}
-        <Button
-          variant={"outline"}
-          className="cursor-pointer text-xs font-fira text-foreground"
-          asChild
+        <motion.div
+          initial={{ y: -30, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.3 + links.length * 0.1 , ease: "easeInOut"}}
         >
-          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-            Resume
-          </a>
-        </Button>
+          <Button
+            variant={"outline"}
+            className="cursor-pointer text-xs font-fira text-foreground"
+            asChild
+          >
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+              Resume
+            </a>
+          </Button>
+        </motion.div>
       </div>
     </nav>
   );

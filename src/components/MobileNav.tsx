@@ -36,7 +36,7 @@ const MobileNav = ({ items }: Props) => {
         </SheetHeader>
         <ul className="flex flex-col gap-4 py-6 justify-center items-center">
           {items.map((item, index) => (
-            <li key={item}>
+            <li key={item} onClick={() => setOpen(false)}>
               <Link href={`#${item.toLowerCase()}`}>
                 <p className="text-xs font-fira text-foreground">
                   {`0${index + 1}.` + " " + item}
