@@ -17,10 +17,10 @@ const Navbar = () => {
   return (
     <nav
       className={cn(
-        "px-2 md:px-8 fixed top-0 left-0 w-full bg-background transition-transform",
+        "px-2 md:px-8 fixed top-0 left-0 w-full bg-background/80 backdrop-blur-md transition-transform ",
         show ? "translate-y-0" : "-translate-y-full",
         shouldHasShadow
-          ? "drop-shadow-lg shadow-gray-900/50 backdrop-blur-md"
+          ? "drop-shadow-lg shadow-gray-900/50 bg-background/70 z-50"
           : ""
       )}
     >
