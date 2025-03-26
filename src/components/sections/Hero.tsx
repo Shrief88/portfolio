@@ -4,13 +4,13 @@ import { motion } from "framer-motion";
 
 import { hero } from "@/content/data.json";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
+import useBreakpoint from "@/hooks/useBreakPoint";
 
 const Hero = () => {
-  let delay = 0 
-  if (typeof window !== "undefined") {
-    delay = window.innerWidth < 768 ? 0.2 : 1;     
- }
- 
+  // Tailwind "md" breakpoint
+  const isMobile = useBreakpoint("(max-width: 768px)");
+  const delay = isMobile ? 0.2 : 1;
+
   return (
     <MaxWidthWrapper className="min-h-screen">
       <section className="flex flex-col justify-center items-start gap-6 max-w-[1000px] w-full">
