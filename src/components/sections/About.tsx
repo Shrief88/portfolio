@@ -3,14 +3,12 @@ import Image from "next/image";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { Badge } from "@/components/ui/badge";
 import { skills } from "@/content/data.json";
+import AnimatedSectionWrapper from "../AnimatedSectionWrapper";
 
 const About = () => {
   return (
     <MaxWidthWrapper>
-      <section
-        className="max-w-[1000px] flex flex-col justify-center py-24"
-        id="about"
-      >
+      <AnimatedSectionWrapper id="about">
         <h1 className="section-heading mb-10" data-section-number="01.">
           About Me
         </h1>
@@ -59,7 +57,7 @@ const About = () => {
             </div>
           </div>
         </div>
-      </section>
+      </AnimatedSectionWrapper>
     </MaxWidthWrapper>
   );
 };

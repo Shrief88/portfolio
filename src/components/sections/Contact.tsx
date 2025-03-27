@@ -1,11 +1,12 @@
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { Button } from "@/components/ui/button";
+import AnimatedSectionWrapper from "@/components/AnimatedSectionWrapper";
 import { links } from "@/content/data.json";
 
 const Contact = () => {
   return (
     <MaxWidthWrapper>
-      <section className="max-w-[1000px] flex flex-col py-20" id="contact">
+      <AnimatedSectionWrapper id="contact">
         <div className="flex flex-col mt-10 justify-center items-center gap-4">
           <p className="font-fira text-foreground">4. What’s Next?</p>
           <h1 className="text-primary-foreground text-4xl md:text-[60px] font-bold">
@@ -24,7 +25,7 @@ const Contact = () => {
             <a href={`mailto:${links.Email.href}`}>Say Hello</a>
           </Button>
         </div>
-      </section>
+      </AnimatedSectionWrapper>
     </MaxWidthWrapper>
   );
 };

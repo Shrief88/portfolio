@@ -2,14 +2,12 @@ import MaxWidthWrapper from "../MaxWidthWrapper";
 import { TabsList, TabsTrigger, Tabs } from "../ui/tabs";
 import { experiences } from "@/content/data.json";
 import TabContent from "../TabContent";
+import AnimatedSectionWrapper from "../AnimatedSectionWrapper";
 
 const Experience = () => {
   return (
     <MaxWidthWrapper>
-      <section
-        className="max-w-[1000px] flex flex-col justify-center py-24"
-        id="experience"
-      >
+      <AnimatedSectionWrapper id="experience">
         <h1 className="section-heading px-6 md:px-0" data-section-number="02.">
           Where I’ve Worked
         </h1>
@@ -34,7 +32,7 @@ const Experience = () => {
             ))}
           </Tabs>
         </div>
-      </section>
+      </AnimatedSectionWrapper>
     </MaxWidthWrapper>
   );
 };
