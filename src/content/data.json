@@ -69,5 +69,38 @@
         "Mentored and graduated over 30 students, equipping them with strong foundational programming skills."
       ]
     }
+  },
+  "projects": {
+    "Wasaly": {
+      "title": "Wasaly",
+      "description": "An E-commerce Fullstack app using MERN stack technologies allowing user to register, login, and make purchases.",
+      "skills": ["React", "Node.js", "MongoDB", "Express", "Tailwind", "Redux"],
+      "links": {
+        "Live": "https://food-delivery-app-dyvo.vercel.app/",
+        "Source": "https://github.com/Shrief88/food-delivery-app",
+        "Youtube": "https://www.youtube.com/watch?v=RrSCqCblo24&ab_channel=SherifEssam",
+        "image": "/images/wasaly.png"
+      }
+    },
+    "Briddit": {
+      "title": "Briddit",
+      "description": "A Reddit clone app using PERN stack technologies allowing user to register, login,make posts, and interact with other users.",
+      "skills": [
+        "React",
+        "Node.js",
+        "PostgreSQL",
+        "Express",
+        "Tailwind",
+        "Redux",
+        "Prisma",
+        "React Query"
+      ],
+      "links": {
+        "Live": "https://reddit-clone-alpha-snowy.vercel.app/",
+        "Source": "https://github.com/Shrief88/reddit-clone",
+        "Youtube": "https://www.youtube.com/watch?v=kclsmPzpmZM&ab_channel=SherifEssam",
+        "image": "/images/briddit.png"
+      }
+    }
   }
 }
