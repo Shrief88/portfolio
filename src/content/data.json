@@ -70,7 +70,7 @@
       ]
     }
   },
-  "projects": {
+  "mainProjects": {
     "Wasaly": {
       "title": "Wasaly",
       "description": "An E-commerce Fullstack app using MERN stack technologies allowing user to register, login, and make purchases.",
@@ -100,6 +100,33 @@
         "Source": "https://github.com/Shrief88/reddit-clone",
         "Youtube": "https://www.youtube.com/watch?v=kclsmPzpmZM&ab_channel=SherifEssam",
         "image": "/images/briddit.png"
+      }
+    }
+  },
+  "otherProjects": {
+    "spotify_client": {
+      "title": "Spotify Client",
+      "description": "A web app for visualizing personalized Spotify data.",
+      "skills": ["React", "Spotify API", "Tailwind"],
+      "links": {
+        "Source": "https://github.com/Shrief88/spotify_client"
+      }
+    },
+    "MyStore": {
+      "title": "MyStore",
+      "description": "A E-commerce app using Angular that offers a rich, dynamic experience on the web.",
+      "skills": ["Angular", "Tailwind"],
+      "links": {
+        "Source": "https://github.com/Shrief88/MyStore"
+      }
+    },
+    "Todo-List": {
+      "title": "Todo-List",
+      "description": "A todo list app using Vanilla JS.",
+      "skills": ["Vanilla JS", "HTML", "CSS"],
+      "links": {
+        "Source": "https://github.com/Shrief88/Todo-List",
+        "Live": "https://shrief88.github.io/Todo-List/"
       }
     }
   }

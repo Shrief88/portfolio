@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="md:hidden">
         <SocialMedia mode="horizontal" />
       </div>
-      <div className="flex justify-center items-center text-xs pt-3">
+      <div className="flex justify-center items-center text-xs pt-3 px-4">
         <p className="text-muted-foreground text-center font-fira">
           Inspired by {" "}
           <a
