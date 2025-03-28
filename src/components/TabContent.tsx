@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { TabsContent } from "@radix-ui/react-tabs";
-import useBreakpoint from "@/hooks/useBreakPoint";
 
 type Props = {
   company: string;
@@ -16,14 +15,12 @@ type Props = {
 };
 
 const TabContent = ({ company, values }: Props) => {
-  // Tailwind "md" breakpoint
-  const isMobile = useBreakpoint("(max-width: 768px)");
 
   return (
-    <TabsContent key={company} value={company} className="w-full">
+    <TabsContent key={company} value={company} className="w-full overflow-hidden">
       <motion.div
-        initial={isMobile ? { y: 30, opacity: 0 } : { x: 30, opacity: 0 }}
-        animate={isMobile ? { y: 0, opacity: 1 } : { x: 0, opacity: 1 }}
+        initial={{ x: 30, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
         className="w-full px-6 md:px-0"
       >

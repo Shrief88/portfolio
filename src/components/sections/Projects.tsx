@@ -7,10 +7,10 @@ import { projects } from "@/content/data.json";
 import { cn } from "@/lib/utils";
 import { Badge } from "../ui/badge";
 
-const Work = () => {
+const Projects = () => {
   return (
     <MaxWidthWrapper>
-      <AnimatedSectionWrapper id="work">
+      <AnimatedSectionWrapper id="projects">
         <h1 className="section-heading mb-10" data-section-number="03.">
           Some Things I’ve Built
         </h1>
@@ -105,4 +105,4 @@ const Work = () => {
   );
 };
 
-export default Work;
+export default Projects;

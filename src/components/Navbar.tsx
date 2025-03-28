@@ -9,7 +9,7 @@ import useScroll from "@/hooks/useScroll";
 import MobileNav from "./MobileNav";
 
 
-const links = ["About", "Experience", "Work", "Contact"];
+const links = ["About", "Experience", "Projects", "Contact"];
 
 const Navbar = () => {
   const { show, shouldHasShadow } = useScroll();
