@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Github, Youtube, Link } from "lucide-react";
 
 import MaxWidthWrapper from "../MaxWidthWrapper";
 import AnimatedSectionWrapper from "../AnimatedSectionWrapper";
@@ -72,6 +73,26 @@ const Work = () => {
                       <Badge key={skill} variant="outline">
                         {skill}
                       </Badge>
+                    ))}
+                  </div>
+
+                  <div className={cn("flex gap-8", index % 2 === 0 && "flex-row-reverse")}>
+                    {Object.entries(project.links).map(([name, url]) => (
+                      <a
+                        key={name}
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-muted-foreground hover:text-white hover:animate-move-up [&:not(:hover)]:animate-move-down"
+                      >
+                        {name === "Live" ? (
+                          <Link size={20} />
+                        ) : name === "Source" ? (
+                          <Github size={20} />
+                        ) : name === "Youtube" ? (
+                          <Youtube size={20} />
+                        ) : null}
+                      </a>
                     ))}
                   </div>
                 </div>
