@@ -23,13 +23,13 @@ const MainProject = ({ title, project, index }: Props) => {
   return (
     <div
       key={title}
-      className="relative grid grid-cols-1 md:grid-cols-12 gap-10"
+      className="relative grid grid-cols-1 lg:grid-cols-12 gap-10"
     >
       <div
         className={cn(
           index % 2 === 0
-            ? "md:col-start-1 md:col-end-7"
-            : "md:col-start-6 md:col-end-[-1]"
+            ? "lg:col-start-1 lg:col-end-7"
+            : "lg:col-start-6 lg:col-end-[-1]"
         )}
       >
         <a href={project.links.Live} target="_blank" rel="noopener noreferrer">
@@ -44,19 +44,19 @@ const MainProject = ({ title, project, index }: Props) => {
       </div>
       <div
         className={cn(
-          "md:absolute",
+          "lg:absolute",
           index % 2 === 0
-            ? "md:col-start-6 md:col-end-[-1]"
-            : "md:col-start-1 md:col-end-7"
+            ? "lg:col-start-6 lg:col-end-[-1]"
+            : "lg:col-start-1 lg:col-end-7"
         )}
       >
         <div
           className={cn(
             "flex flex-col gap-6",
-            index % 2 === 0 ? "md:items-end" : "items-start"
+            index % 2 === 0 ? "lg:items-end" : "items-start"
           )}
         >
-          <h2 className="text-primary-foreground text-xl md:text-2xl font-bold">
+          <h2 className="text-primary-foreground text-xl lg:text-2xl font-bold">
             {title}
           </h2>
           <div className="bg-secondary w-full p-6 z-20 rounded-2xl">
@@ -65,7 +65,7 @@ const MainProject = ({ title, project, index }: Props) => {
           <div
             className={cn(
               "flex flex-wrap gap-2",
-              index % 2 === 0 ? "md:pl-10" : "md:pr-10"
+              index % 2 === 0 ? "lg:pl-10" : "lg:pr-10"
             )}
           >
             {project.skills.map((skill) => (
