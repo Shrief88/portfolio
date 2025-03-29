@@ -28,8 +28,8 @@ const MainProject = ({ title, project, index }: Props) => {
       <div
         className={cn(
           index % 2 === 0
-            ? "lg:col-start-1 lg:col-end-7"
-            : "lg:col-start-6 lg:col-end-[-1]"
+            ? "lg:col-start-1 lg:col-end-8"
+            : "lg:col-start-6 lg:col-end-13"
         )}
       >
         <a href={project.links.Live} target="_blank" rel="noopener noreferrer">
@@ -46,7 +46,7 @@ const MainProject = ({ title, project, index }: Props) => {
         className={cn(
           "lg:absolute",
           index % 2 === 0
-            ? "lg:col-start-6 lg:col-end-[-1]"
+            ? "lg:col-start-7 lg:col-end-13"
             : "lg:col-start-1 lg:col-end-7"
         )}
       >
@@ -65,7 +65,9 @@ const MainProject = ({ title, project, index }: Props) => {
           <div
             className={cn(
               "flex flex-wrap gap-2",
-              index % 2 === 0 ? "lg:pl-10" : "lg:pr-10"
+              index % 2 === 0
+                ? "lg:pl-14 lg:justify-end"
+                : "lg:pr-10 lg:justify-start"
             )}
           >
             {project.skills.map((skill) => (
