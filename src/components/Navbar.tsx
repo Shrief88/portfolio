@@ -50,7 +50,7 @@ const Navbar = () => {
             className="cursor-pointer text-xs font-fira text-foreground"
             asChild
           >
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+            <a href="/Sherif_Essam_Resume.pdf" target="_blank" rel="noopener noreferrer">
               Resume
             </a>
           </Button>
