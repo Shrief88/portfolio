@@ -35,18 +35,18 @@
   ],
   "experiences": {
     "C M Cherry Consulting": {
-      "title": "Full-Stack Developer",
+      "title": "Frontend Developer",
       "companyUrl": "https://www.cmcherryconsulting.com/",
       "startDate": "Feb 2024",
       "endDate": "Current",
       "description": [
-        "Handled the authentication flow with Amazon Cognito for seamless integration with AWS services and cost-effectiveness.",
-        "Built a user-friendly, dynamic form for data input required in biological analysis.",
-        "Developed a robust, feature-rich table component with full CRUD functionality.",
-        "Created an interactive tool for designing and executing biological analysis through visual diagrams.",
-        "Integrated the application with AWS services like DynamoDB and S3 via Lambda functions.",
-        "Implemented unit and integration tests with Vitest, increasing automation and code coverage for higher software reliability.",
-        "Utilized libraries and tools such as Redux, Mantine, TanStack Table, React Flow, and Vitest."
+        "Data Visualization: Engineered interactive plots using D3.js to visualize complex biological data for researchers.",
+        "Authentication: Integrated Amazon Cognito to manage secure user authentication and frontend service access.",
+        "Dynamic Forms: Developed user-friendly, dynamic forms for complex biological data input and validation.",
+        "Data Components: Built a robust, high-performance table component using TanStack Table for complex data operations.",
+        "Visual Tools: Created an interactive tool for executing biological analysis through visual diagrams using React Flow.",
+        "Testing: Implemented unit and integration tests with Vitest, significantly increasing code coverage and reliability.",
+        "Utilized libraries and tools such as Redux, Mantine, TanStack, React Flow, and Vitest."
       ]
     },
     "LaFamila Egypt": {
