@@ -1,14 +1,16 @@
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { Button } from "@/components/ui/button";
 import AnimatedSectionWrapper from "@/components/AnimatedSectionWrapper";
-import { links } from "@/content/data.json";
+import data from "@/content/data.json";
 
 const Contact = () => {
+  const { links } = data;
+  
   return (
     <MaxWidthWrapper>
       <AnimatedSectionWrapper id="contact">
         <div className="flex flex-col mt-10 justify-center items-center gap-4">
-          <p className="font-fira text-foreground">4. What’s Next?</p>
+          <p className="font-fira text-foreground">5. What’s Next?</p>
           <h1 className="text-primary-foreground text-4xl md:text-[60px] font-bold">
             Get In Touch
           </h1>

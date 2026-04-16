@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import "swiper/css";
+@import "swiper/css/pagination";
 
 @plugin "tailwindcss-animate";
 
@@ -43,7 +45,7 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-  --color-separator: var(--separator); 
+  --color-separator: var(--separator);
 }
 
 :root {
@@ -53,7 +55,7 @@
   --muted-foreground: oklch(66.24% 0.0461 270.63);
   --primary-foreground: oklch(87.86% 0.0455 271.71);
   --secondary-foreground: oklch(66.24% 0.0461 270.63);
-  --separator: oklch(32.94% 0.0601 260.77); 
+  --separator: oklch(32.94% 0.0601 260.77);
   --radius: 0.625rem;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
@@ -123,11 +125,11 @@
   body {
     @apply bg-background text-foreground;
   }
-  h1{
+  h1 {
     @apply font-inter p-0 leading-none;
   }
 
-  p{
+  p {
     @apply font-inter p-0;
   }
 }
@@ -148,7 +150,7 @@
   }
 
   .section-heading {
-    @apply flex items-end text-primary-foreground text-[22px] md:text-[27px] font-bold whitespace-nowrap leading-5 md:leading-6
+    @apply flex items-end text-primary-foreground text-[22px] md:text-[27px] font-bold whitespace-nowrap leading-5 md:leading-6;
   }
 
   .section-heading::before {
@@ -160,8 +162,26 @@
     @apply inline-block h-0.25 w-full md:w-[300px] bg-separator ml-4 self-center;
     content: "";
   }
-}
 
+  .reviews-swiper {
+    @apply pb-14;
+  }
+
+  .reviews-swiper .swiper-slide {
+    @apply h-auto ;
+  }
+
+ 
+
+  .reviews-swiper .swiper-pagination-bullet {
+    @apply h-2.5 w-2.5 opacity-50 transition-all duration-300;
+    background-color: #ffffff !important; /* Custom hex color */
+  }
+  
+  .reviews-swiper .swiper-pagination-bullet-active {
+    @apply w-8 rounded-full bg-foreground opacity-100;
+  }
+}
 
 @theme {
   --animate-move-up: move-up 0.3s ease-in-out forwards;

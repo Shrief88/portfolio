@@ -1,6 +1,7 @@
-import { Github, Link, Youtube } from "lucide-react";
+import { Link } from "lucide-react";
 import Image from "next/image";
 
+import { getImagePlaceholder } from "@/lib/getImagePlaceholder";
 import { cn } from "@/lib/utils";
 import { Badge } from "./ui/badge";
 
@@ -10,16 +11,16 @@ type Props = {
     description: string;
     skills: string[];
     links: {
-      Live: string;
-      Source: string;
-      Youtube: string;
+      Live?: string;
       image: string;
     };
   };
   index: number;
 };
 
-const MainProject = ({ title, project, index }: Props) => {
+const MainProject = async ({ title, project, index }: Props) => {
+  const { base64, metadata } = await getImagePlaceholder(project.links.image);
+
   return (
     <div
       key={title}
@@ -37,8 +38,10 @@ const MainProject = ({ title, project, index }: Props) => {
             className="w-full rounded object-cover group-hover:animate-move-diagonal-up opacity-75 hover:opacity-100"
             src={project.links.image}
             alt={title}
-            width={1000}
-            height={1000}
+            width={metadata.width}
+            height={metadata.height}
+            placeholder="blur"
+            blurDataURL={base64}
           />
         </a>
       </div>
@@ -90,10 +93,6 @@ const MainProject = ({ title, project, index }: Props) => {
               >
                 {name === "Live" ? (
                   <Link size={20} />
-                ) : name === "Source" ? (
-                  <Github size={20} />
-                ) : name === "Youtube" ? (
-                  <Youtube size={20} />
                 ) : null}
               </a>
             ))}

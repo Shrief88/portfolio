@@ -18,7 +18,7 @@ const AnimatedSectionWrapper = ({ id, children }: Props) => {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 50 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className="max-w-[1000px] flex flex-col justify-center py-24"
+      className="max-w-[1000px] w-full flex flex-col justify-center py-24"
       id={id}
     >
       {children}

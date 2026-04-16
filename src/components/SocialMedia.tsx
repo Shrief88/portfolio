@@ -1,5 +1,5 @@
 import { Linkedin, Github, MailIcon } from "lucide-react";
-import { links } from "@/content/data.json";
+import data from "@/content/data.json";
 import { cn } from "@/lib/utils";
 
 type Props = {
@@ -9,22 +9,23 @@ type Props = {
 const SocialLinks = [
   {
     icon: <Linkedin size={20} />,
-    name: links.Linkedin.name,
-    href: links.Linkedin.href,
+    name: data.links.Linkedin.name,
+    href: data.links.Linkedin.href,
   },
   {
     icon: <Github size={20} />,
-    name: links.Github.name,
-    href: links.Github.href,
+    name: data.links.Github.name,
+    href: data.links.Github.href,
   },
   {
     icon: <MailIcon size={20} />,
-    name: links.Email.name,
-    href: `mailto:${links.Email.href}`,
+    name: data.links.Email.name,
+    href: `mailto:${data.links.Email.href}`,
   },
 ];
 
 const SocialMedia = ({ mode }: Props) => {
+
   return (
     <div
       className={cn(

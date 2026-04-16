@@ -1,10 +1,11 @@
 import MaxWidthWrapper from "../MaxWidthWrapper";
 import { TabsList, TabsTrigger, Tabs } from "../ui/tabs";
-import { experiences } from "@/content/data.json";
+import data from "@/content/data.json";
 import TabContent from "../TabContent";
 import AnimatedSectionWrapper from "../AnimatedSectionWrapper";
 
 const Experience = () => {
+  const { experiences } = data;
   return (
     <MaxWidthWrapper>
       <AnimatedSectionWrapper id="experience">
