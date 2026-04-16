@@ -25,28 +25,44 @@
     "TypeScript",
     "React",
     "React Native",
+    "Next.js",
     "Redux",
+    "Supabase",
     "TanStack",
     "Tailwind CSS",
     "React Testing Library",
     "Git",
     "AWS",
-    "Node.js"
+    "Node.js",
+    "WordPress",
+    "Elementor"
   ],
   "experiences": {
     "C M Cherry Consulting": {
       "title": "Frontend Developer",
       "companyUrl": "https://www.cmcherryconsulting.com/",
       "startDate": "Feb 2024",
-      "endDate": "Current",
+      "endDate": "April 2026",
       "description": [
         "Data Visualization: Engineered interactive plots using D3.js to visualize complex biological data for researchers.",
         "Authentication: Integrated Amazon Cognito to manage secure user authentication and frontend service access.",
         "Dynamic Forms: Developed user-friendly, dynamic forms for complex biological data input and validation.",
         "Data Components: Built a robust, high-performance table component using TanStack Table for complex data operations.",
         "Visual Tools: Created an interactive tool for executing biological analysis through visual diagrams using React Flow.",
-        "Testing: Implemented unit and integration tests with Vitest, significantly increasing code coverage and reliability.",
-        "Utilized libraries and tools such as Redux, Mantine, TanStack, React Flow, and Vitest."
+        "Testing: Implemented unit and integration tests with Vitest, significantly increasing code coverage and reliability."
+      ]
+    },
+    "Freelance": {
+      "title": "Freelance Developer",
+      "companyUrl": "",
+      "startDate": "June 2025",
+      "endDate": "Current",
+      "description": [
+        "Successfully completed 3 freelance projects with 5-star client ratings.",
+        "Developed 2 marketing websites with fully functional admin panels, enabling clients to manage content, updates, and user interactions.",
+        "Built and customized a WordPress website, including layout adjustments, plugin integration, and performance improvements.",
+        "Delivered responsive, user-friendly interfaces with focus on performance and clean UI/UX.",
+        "Communicated directly with clients to gather requirements, provide updates, and ensure timely delivery."
       ]
     },
     "LaFamila Egypt": {
@@ -71,63 +87,75 @@
     }
   },
   "mainProjects": {
-    "Wasaly": {
-      "title": "Wasaly",
-      "description": "An E-commerce Fullstack app using MERN stack technologies allowing user to register, login, and make purchases.",
-      "skills": ["React", "Node.js", "MongoDB", "Express", "Tailwind", "Redux"],
-      "links": {
-        "Live": "https://food-delivery-app-dyvo.vercel.app/",
-        "Source": "https://github.com/Shrief88/food-delivery-app",
-        "Youtube": "https://www.youtube.com/watch?v=RrSCqCblo24&ab_channel=SherifEssam",
-        "image": "/images/wasaly.png"
-      }
-    },
-    "Briddit": {
-      "title": "Briddit",
-      "description": "A Reddit clone app using PERN stack technologies allowing user to register, login,make posts, and interact with other users.",
+    "Helix": {
+      "title": "Helix",
+      "description": "An interactive data visualization platform for biological data analysis, featuring dynamic charts, selection tools, and real-time data processing.",
       "skills": [
-        "React",
-        "Node.js",
-        "PostgreSQL",
-        "Express",
-        "Tailwind",
-        "Redux",
-        "Prisma",
-        "React Query"
+        "React.js",
+        "Mantine",
+        "AWS",
+        "TanStack Query",
+        "React Testing Library"
       ],
       "links": {
-        "Live": "https://reddit-clone-alpha-snowy.vercel.app/",
-        "Source": "https://github.com/Shrief88/reddit-clone",
-        "Youtube": "https://www.youtube.com/watch?v=kclsmPzpmZM&ab_channel=SherifEssam",
-        "image": "/images/briddit.png"
+        "image": "/images/helix.webp"
+      }
+    },
+
+    "Sila": {
+      "title": "Sila",
+      "description": "A full-stack marketing website built with Next.js and Tailwind CSS, including a custom admin panel for managing content, events, and dynamic sections.",
+      "skills": ["Next.js", "Tailwind CSS", "Supabase", "TanStack Query"],
+      "links": {
+        "Live": "https://silaevent.com/",
+        "image": "/images/sila.webp"
+      }
+    },
+
+    "Bin Qirad": {
+      "title": "Bin Qirad",
+      "description": "A full-stack business website with an admin dashboard for managing products, categories, and content, built using Next.js and Supabase.",
+      "skills": ["Next.js", "Tailwind CSS", "Supabase", "TanStack Query"],
+      "links": {
+        "Live": "https://bin-qirad.vercel.app",
+        "image": "/images/binQirad.webp"
+      }
+    },
+
+    "IFTC Union": {
+      "title": "IFTC Union",
+      "description": "A responsive WordPress website built with Elementor, customized for content management, layout flexibility, and improved user experience.",
+      "skills": ["WordPress", "Elementor"],
+      "links": {
+        "Live": "https://iftcunion.org/",
+        "image": "/images/iftcUnion.webp"
       }
     }
   },
-  "otherProjects": {
-    "spotify_client": {
-      "title": "Spotify Client",
-      "description": "A web app for visualizing personalized Spotify data.",
-      "skills": ["React", "Spotify API", "Tailwind"],
-      "links": {
-        "Source": "https://github.com/Shrief88/spotify_client"
-      }
+  "reviews": [
+    {
+      "name": "Christopher Cherry",
+      "title": "Founder at C. M. Cherry Consulting",
+      "review": "I had the pleasure of working with Sherif on the Helix platform, where he contributed as a frontend engineer during a critical phase leading up to our beta release.\nSherif consistently demonstrated strong technical skills, particularly with modern frontend technologies, and was able to translate complex requirements into clean, well-structured implementations.",
+      "link": "https://www.linkedin.com/in/sherif-essam-eldin/details/recommendations/?detailScreenTabIndex=2"
     },
-    "MyStore": {
-      "title": "MyStore",
-      "description": "A E-commerce app using Angular that offers a rich, dynamic experience on the web.",
-      "skills": ["Angular", "Tailwind"],
-      "links": {
-        "Source": "https://github.com/Shrief88/MyStore"
-      }
+    {
+      "name": "Muntasir Al-Hussain",
+      "title": "Founder of Sila",
+      "review": "Eng. Sherif is a very cooperative person. \nHe handled all the revisions I requested with great professionalism and openness, and consistently provided valuable suggestions to improve quality. \nGod willing, I look forward to continuing our collaboration with him.",
+      "link": "https://mostaql.com/u/Shrief14/reviews/9172654"
     },
-    "Todo-List": {
-      "title": "Todo-List",
-      "description": "A todo list app using Vanilla JS.",
-      "skills": ["Vanilla JS", "HTML", "CSS"],
-      "links": {
-        "Source": "https://github.com/Shrief88/Todo-List",
-        "Live": "https://shrief88.github.io/Todo-List/"
-      }
+    {
+      "name": "Shereen Abdelaziz",
+      "title": "Founder of Zad Marketing",
+      "review": "Thank you very much, Eng. Sherif. I attest to his sincerity, dedication to work, professionalism, expertise, and patience.Wishing him continued success.",
+      "link": "https://mostaql.com/u/Shrief14/reviews/9553590"
+    },
+    {
+      "name": "Fahad A.",
+      "title": "Mostaql Client",
+      "review": "A professional engineer who understands the work assigned to him and is easy to communicate with. The project was delivered with the required quality.",
+      "link": "https://mostaql.com/u/Shrief14/reviews/8733879"
     }
-  }
+  ]
 }

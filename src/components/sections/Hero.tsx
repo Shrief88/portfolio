@@ -2,11 +2,12 @@
 
 import { motion } from "framer-motion";
 
-import { hero } from "@/content/data.json";
+import data from "@/content/data.json";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import useBreakpoint from "@/hooks/useBreakPoint";
 
 const Hero = () => {
+  const { hero } = data;
   // Tailwind "md" breakpoint
   const isMobile = useBreakpoint("(max-width: 768px)");
   const delay = isMobile ? 0.2 : 1;
@@ -54,4 +55,3 @@ const Hero = () => {
 };
 
 export default Hero;
-// className="flex flex-col justify-center items-start max-w-[1000px] gap-6"

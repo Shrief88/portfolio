@@ -6,6 +6,7 @@ import Contact from "@/components/sections/Contact";
 import Footer from "@/components/Footer";
 import SideLinks from "@/components/SideLinks";
 import Projects from "@/components/sections/Projects";
+import Reviews from "@/components/sections/Reviews";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <About />
         <Experience />
         <Projects />
+        <Reviews />
         <Contact />
       </main>
       <Footer />
