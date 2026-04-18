@@ -17,7 +17,7 @@ const Experience = () => {
             className="md:flex-row gap-10"
             defaultValue={Object.keys(experiences)[0]}
           >
-            <TabsList className="md:flex-col items-start h-full bg-background gap-0 max-w-screen overflow-scroll md:overflow-hidden justify-start">
+            <TabsList className="md:flex-col items-start h-full bg-background gap-0 max-w-full overflow-scroll md:overflow-hidden justify-start">
               {Object.keys(experiences).map((company) => (
                 <TabsTrigger
                   key={company}
