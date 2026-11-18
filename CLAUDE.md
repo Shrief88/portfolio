@@ -20,7 +20,7 @@ There is no test suite.
 
 Single-page personal portfolio built with Next.js and deployed on Vercel.
 
-**Content is data-driven.** Nearly all copy (hero text, skills, experiences, projects, reviews, social links) lives in `src/content/data.json`. To update portfolio content, edit that JSON instead of the components. The resume PDF is served from `public/Sherif_Essam_Resume.pdf` (linked from `Navbar` and `MobileNav`).
+**Content is data-driven.** Nearly all copy (hero text, skills, experiences, projects, reviews, social links) lives in `src/content/data.json`. To update portfolio content, edit that JSON instead of the components. The resume PDF is served from `public/Sherif_Essam_Resume.pdf` (linked from `Navbar` and `MobileNav`). It is generated from `latex/Sherif-Essam-Resume.tex`: edit the `.tex`, run `npm run resume` (needs a local TeX Live with XeLaTeX), then commit both files. Don't edit the PDF directly.
 
 **Page composition.** `src/app/page.tsx` stacks the sections from `src/components/sections/` (Hero, About, Experience, Projects, Reviews, Contact) between `Navbar`/`SideLinks` and `Footer`. `AnimatedSectionWrapper` fades sections in on scroll via `useInView`; its `id` is the anchor target for nav links. `useScroll` drives the hide-on-scroll-down navbar.
 

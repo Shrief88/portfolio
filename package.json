@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "resume": "cd latex && latexmk -xelatex -interaction=nonstopmode -halt-on-error Sherif-Essam-Resume.tex && cp Sherif-Essam-Resume.pdf ../public/Sherif_Essam_Resume.pdf"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.6",
