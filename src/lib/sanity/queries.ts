@@ -28,7 +28,7 @@ export const homePageQuery = defineQuery(`{
       asset->{
         _id,
         url,
-        metadata{ lqip, dimensions{ width, height } }
+        metadata{ lqip }
       }
     }
   },

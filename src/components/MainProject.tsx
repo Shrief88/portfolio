@@ -13,7 +13,7 @@ type Props = {
 
 const MainProject = ({ project, index }: Props) => {
   const { title, image, liveUrl } = project;
-  const { lqip, dimensions } = image.asset.metadata;
+  const { lqip } = image.asset.metadata;
 
   return (
     <div
@@ -29,11 +29,11 @@ const MainProject = ({ project, index }: Props) => {
       >
         <a href={liveUrl} target="_blank" rel="noopener noreferrer">
           <Image
-            className="w-full rounded object-cover group-hover:animate-move-diagonal-up opacity-75 hover:opacity-100"
-            src={urlFor(image).width(1200).url()}
+            className="w-full aspect-[2/1] rounded object-cover group-hover:animate-move-diagonal-up opacity-75 hover:opacity-100"
+            src={urlFor(image).width(1200).height(600).fit("crop").url()}
             alt={image.alt ?? title}
-            width={dimensions.width}
-            height={dimensions.height}
+            width={1200}
+            height={600}
             placeholder="blur"
             blurDataURL={lqip}
           />

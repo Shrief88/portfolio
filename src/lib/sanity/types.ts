@@ -35,7 +35,6 @@ export type ProjectImage = {
     url: string;
     metadata: {
       lqip: string;
-      dimensions: { width: number; height: number };
     };
   };
 };
