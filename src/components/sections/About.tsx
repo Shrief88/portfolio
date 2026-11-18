@@ -2,11 +2,13 @@ import Image from "next/image";
 
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { Badge } from "@/components/ui/badge";
-import data from "@/content/data.json";
 import AnimatedSectionWrapper from "../AnimatedSectionWrapper";
 
-const About = () => {
-  const { skills } = data;
+type Props = {
+  skills: string[];
+};
+
+const About = ({ skills }: Props) => {
   return (
     <MaxWidthWrapper>
       <AnimatedSectionWrapper id="about">

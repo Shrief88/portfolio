@@ -1,10 +1,15 @@
+import type { SiteLinks } from "@/lib/sanity/types";
 import SocialMedia from "./SocialMedia";
 
-const Footer = () => {
+type Props = {
+  links: SiteLinks;
+};
+
+const Footer = ({ links }: Props) => {
   return (
     <div className="w-full pt-10 pb-5">
       <div className="md:hidden">
-        <SocialMedia mode="horizontal" />
+        <SocialMedia mode="horizontal" links={links} />
       </div>
       <div className="flex justify-center items-center text-xs pt-3 px-4">
         <p className="text-muted-foreground text-center font-fira">

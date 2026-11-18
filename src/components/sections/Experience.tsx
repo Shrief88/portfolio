@@ -1,11 +1,14 @@
 import MaxWidthWrapper from "../MaxWidthWrapper";
 import { TabsList, TabsTrigger, Tabs } from "../ui/tabs";
-import data from "@/content/data.json";
+import type { Experience as ExperienceType } from "@/lib/sanity/types";
 import TabContent from "../TabContent";
 import AnimatedSectionWrapper from "../AnimatedSectionWrapper";
 
-const Experience = () => {
-  const { experiences } = data;
+type Props = {
+  experiences: ExperienceType[];
+};
+
+const Experience = ({ experiences }: Props) => {
   return (
     <MaxWidthWrapper>
       <AnimatedSectionWrapper id="experience">
@@ -15,21 +18,21 @@ const Experience = () => {
         <div className="pt-10">
           <Tabs
             className="md:flex-row gap-10"
-            defaultValue={Object.keys(experiences)[0]}
+            defaultValue={experiences[0]?._id}
           >
             <TabsList className="md:flex-col items-start h-full bg-background gap-0 max-w-full overflow-scroll md:overflow-hidden justify-start">
-              {Object.keys(experiences).map((company) => (
+              {experiences.map(({ _id, company }) => (
                 <TabsTrigger
-                  key={company}
-                  value={company}
+                  key={_id}
+                  value={_id}
                   className="text-muted-foreground data-[state=active]:text-foreground rounded-none border-b-1 border-b-separator data-[state=active]:border-b-foreground md:border-b-0 md:border-l-1 md:border-l-separator md:data-[state=active]:border-l-foreground md:py-2 px-6 md:px-2 "
                 >
                   {company}
                 </TabsTrigger>
               ))}
             </TabsList>
-            {Object.entries(experiences).map(([company, values]) => (
-              <TabContent company={company} values={values} key={company} />
+            {experiences.map((experience) => (
+              <TabContent experience={experience} key={experience._id} />
             ))}
           </Tabs>
         </div>

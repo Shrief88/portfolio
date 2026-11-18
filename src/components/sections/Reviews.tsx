@@ -6,19 +6,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import AnimatedSectionWrapper from "../AnimatedSectionWrapper";
 import MaxWidthWrapper from "../MaxWidthWrapper";
-import data from "@/content/data.json";
+import type { Review } from "@/lib/sanity/types";
 import { cn } from "@/lib/utils";
 
-type Review = {
-  name: string;
-  title: string;
-  review: string;
-  link?: string;
+type Props = {
+  reviews: Review[];
 };
 
-const Reviews = () => {
-  const reviews = data.reviews as Review[];
-
+const Reviews = ({ reviews }: Props) => {
   return (
     <MaxWidthWrapper>
       <AnimatedSectionWrapper id="reviews">
@@ -37,7 +32,7 @@ const Reviews = () => {
         >
           {reviews.map((review) => (
             <SwiperSlide
-              key={`${review.name}-${review.title}`}
+              key={review._id}
               className="lg:h-auto"
           
             >

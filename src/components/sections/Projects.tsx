@@ -1,10 +1,13 @@
 import MaxWidthWrapper from "../MaxWidthWrapper";
 import AnimatedSectionWrapper from "../AnimatedSectionWrapper";
-import data from "@/content/data.json";
+import type { Project } from "@/lib/sanity/types";
 import MainProject from "../MainProject";
 
-const Projects = () => {
-  const { mainProjects } = data;
+type Props = {
+  projects: Project[];
+};
+
+const Projects = ({ projects }: Props) => {
   return (
     <MaxWidthWrapper>
       <AnimatedSectionWrapper id="projects">
@@ -12,13 +15,8 @@ const Projects = () => {
           Some Things I’ve Built
         </h1>
         <div className="flex flex-col gap-16">
-          {Object.entries(mainProjects).map(([title, project], index) => (
-            <MainProject
-              key={title}
-              title={title}
-              project={project}
-              index={index}
-            />
+          {projects.map((project, index) => (
+            <MainProject key={project._id} project={project} index={index} />
           ))}
         </div>
       </AnimatedSectionWrapper>

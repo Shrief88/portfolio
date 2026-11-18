@@ -14,7 +14,8 @@ The stack and the conventions this codebase already follows. Match them when add
 | Animation | Framer Motion |
 | Icons | `lucide-react` |
 | Carousel | Swiper |
-| Images | `next/image` with blur placeholders from `plaiceholder` |
+| CMS | Sanity (`next-sanity` v11, embedded Studio at `/studio`) |
+| Images | `next/image` with Sanity CDN images and Sanity LQIP blur placeholders |
 | Fonts | `next/font/google`: Inter (`--font-inter`) and Fira Code (`--font-fira-code`) |
 | Linting | ESLint 9 flat config, extending `next/core-web-vitals` and `next/typescript` |
 | Hosting | Vercel |
@@ -29,8 +30,9 @@ There is no test framework and no Prettier config.
 - `src/components/ui/`: shadcn-generated primitives. Add new ones with the shadcn CLI, which uses the aliases in `components.json`.
 - `src/hooks/`: custom hooks, named `useXxx.ts`.
 - `src/lib/`: utilities (`utils.ts` has `cn()`) and server helpers.
-- `src/content/data.json`: all site content.
-- `public/`: static assets. Project images go in `public/images/` as `.webp`.
+- `src/lib/sanity/`: Sanity client, GROQ queries, fetch helper, hand-written types, `urlFor`.
+- `src/sanity/`: Studio schemas (`schemaTypes/`), env config, and the Studio client component.
+- `public/`: static assets (`me.jpeg`, resume PDF). Project images live in Sanity, not here.
 
 ## Components
 
@@ -44,19 +46,20 @@ There is no test framework and no Prettier config.
 - File names are PascalCase and match the component name (`MainProject.tsx`). Hook files are camelCase (`useScroll.ts`).
 - Props are a local `type Props = { ... }` declared above the component and destructured in the signature. Use `type`, not `interface`.
 - Server Components are the default. Add `"use client"` as the first line only when the component needs state, effects, browser APIs, Framer Motion, or Swiper.
-- Server-only data work (for example reading files from `public/`) goes in `src/lib/` behind `import "server-only"`, wrapped in React `cache()`, and is called from an async Server Component (see `MainProject` and `getImagePlaceholder`).
+- Server-only data work goes in `src/lib/` behind `import "server-only"`, wrapped in React `cache()`, and is called from an async Server Component (see `getHomePage` in `src/lib/sanity/fetch.ts`).
 - Hooks that read browser state must return a stable SSR-safe value until hydration (see `useBreakPoint`).
 
 ## Content and data
 
-- Copy, links, skills, experiences, projects, and reviews belong in `src/content/data.json`, not hardcoded in JSX. Components import it directly: `import data from "@/content/data.json";`.
-- In `experiences` and `mainProjects`, the object key is the display title. Components iterate with `Object.entries(...)`.
-- When a JSON shape needs typing, declare a local type and cast (`data.reviews as Review[]`).
+- Copy, links, skills, experiences, projects, and reviews are stored in Sanity, not hardcoded in JSX.
+- Fetch once in `src/app/page.tsx` with `getHomePage()` and pass slices down as props. Client components can't call the server fetch, so they only receive props.
+- Query result types are hand-written in `src/lib/sanity/types.ts`. Update them together with `src/lib/sanity/queries.ts` and the schemas.
+- Ordered lists (experiences, projects, reviews) are separate documents sorted by their `order` field in the GROQ query.
 
 ## Imports
 
 - Order: third-party packages first, then a blank line, then local imports.
-- Use the `@/` alias (`@/lib/utils`, `@/hooks/useScroll`, `@/content/data.json`) for anything outside the current folder tree. Relative imports are used for sibling and parent components (`../MaxWidthWrapper`, `./ui/button`).
+- Use the `@/` alias (`@/lib/utils`, `@/hooks/useScroll`, `@/lib/sanity/types`) for anything outside the current folder tree. Relative imports are used for sibling and parent components (`../MaxWidthWrapper`, `./ui/button`).
 
 ## Formatting
 
@@ -82,4 +85,4 @@ There is no test framework and no Prettier config.
 ## Links and accessibility
 
 - External links use `target="_blank" rel="noopener noreferrer"`.
-- `next/image` always gets `alt`, explicit `width`/`height`, and a blur placeholder for project images.
+- `next/image` always gets `alt`, explicit `width`/`height` (from the asset metadata), and the asset `lqip` as `blurDataURL` for project images.

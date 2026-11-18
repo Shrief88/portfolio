@@ -7,21 +7,24 @@ import Footer from "@/components/Footer";
 import SideLinks from "@/components/SideLinks";
 import Projects from "@/components/sections/Projects";
 import Reviews from "@/components/sections/Reviews";
+import { getHomePage } from "@/lib/sanity/fetch";
 
-export default function Home() {
+export default async function Home() {
+  const { settings, experiences, projects, reviews } = await getHomePage();
+
   return (
     <>
       <Navbar />
-      <SideLinks />
+      <SideLinks links={settings.links} />
       <main>
-        <Hero />
-        <About />
-        <Experience />
-        <Projects />
-        <Reviews />
-        <Contact />
+        <Hero hero={settings.hero} />
+        <About skills={settings.skills} />
+        <Experience experiences={experiences} />
+        <Projects projects={projects} />
+        <Reviews reviews={reviews} />
+        <Contact email={settings.links.email} />
       </main>
-      <Footer />
+      <Footer links={settings.links} />
     </>
   );
 }

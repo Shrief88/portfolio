@@ -3,21 +3,17 @@
 import { motion } from "framer-motion";
 import { TabsContent } from "@radix-ui/react-tabs";
 
+import type { Experience } from "@/lib/sanity/types";
+
 type Props = {
-  company: string;
-  values: {
-    title: string;
-    companyUrl: string;
-    startDate: string;
-    endDate: string;
-    description: string[];
-  };
+  experience: Experience;
 };
 
-const TabContent = ({ company, values }: Props) => {
+const TabContent = ({ experience }: Props) => {
+  const { _id, company, ...values } = experience;
 
   return (
-    <TabsContent key={company} value={company} className="w-full overflow-hidden">
+    <TabsContent key={_id} value={_id} className="w-full overflow-hidden">
       <motion.div
         initial={{ x: 30, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
@@ -28,13 +24,17 @@ const TabContent = ({ company, values }: Props) => {
           <h2 className="text-primary-foreground text-lg md:text-xl font-bold">
             {values.title}{" "}
             <span className="text-foreground text-lg md:text-xl">
-              <a
-                href={values.companyUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                @ {company}
-              </a>
+              {values.companyUrl ? (
+                <a
+                  href={values.companyUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  @ {company}
+                </a>
+              ) : (
+                <>@ {company}</>
+              )}
             </span>
           </h2>
           <p className="font-fira text-muted-foreground text-sm">

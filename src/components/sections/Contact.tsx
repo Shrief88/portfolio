@@ -1,11 +1,12 @@
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { Button } from "@/components/ui/button";
 import AnimatedSectionWrapper from "@/components/AnimatedSectionWrapper";
-import data from "@/content/data.json";
 
-const Contact = () => {
-  const { links } = data;
-  
+type Props = {
+  email?: string;
+};
+
+const Contact = ({ email }: Props) => {
   return (
     <MaxWidthWrapper>
       <AnimatedSectionWrapper id="contact">
@@ -24,7 +25,7 @@ const Contact = () => {
             className="cursor-pointer text-sm font-fira text-foreground mt-5"
             asChild
           >
-            <a href={`mailto:${links.Email.href}`}>Say Hello</a>
+            <a href={`mailto:${email}`}>Say Hello</a>
           </Button>
         </div>
       </AnimatedSectionWrapper>

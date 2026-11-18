@@ -1,25 +1,19 @@
 import { Link } from "lucide-react";
 import Image from "next/image";
 
-import { getImagePlaceholder } from "@/lib/getImagePlaceholder";
+import { urlFor } from "@/lib/sanity/image";
+import type { Project } from "@/lib/sanity/types";
 import { cn } from "@/lib/utils";
 import { Badge } from "./ui/badge";
 
 type Props = {
-  title: string;
-  project: {
-    description: string;
-    skills: string[];
-    links: {
-      Live?: string;
-      image: string;
-    };
-  };
+  project: Project;
   index: number;
 };
 
-const MainProject = async ({ title, project, index }: Props) => {
-  const { base64, metadata } = await getImagePlaceholder(project.links.image);
+const MainProject = ({ project, index }: Props) => {
+  const { title, image, liveUrl } = project;
+  const { lqip, dimensions } = image.asset.metadata;
 
   return (
     <div
@@ -33,15 +27,15 @@ const MainProject = async ({ title, project, index }: Props) => {
             : "lg:col-start-6 lg:col-end-13"
         )}
       >
-        <a href={project.links.Live} target="_blank" rel="noopener noreferrer">
+        <a href={liveUrl} target="_blank" rel="noopener noreferrer">
           <Image
             className="w-full rounded object-cover group-hover:animate-move-diagonal-up opacity-75 hover:opacity-100"
-            src={project.links.image}
-            alt={title}
-            width={metadata.width}
-            height={metadata.height}
+            src={urlFor(image).width(1200).url()}
+            alt={image.alt ?? title}
+            width={dimensions.width}
+            height={dimensions.height}
             placeholder="blur"
-            blurDataURL={base64}
+            blurDataURL={lqip}
           />
         </a>
       </div>
@@ -83,19 +77,16 @@ const MainProject = async ({ title, project, index }: Props) => {
           <div
             className={cn("flex gap-8", index % 2 === 0 && "flex-row-reverse")}
           >
-            {Object.entries(project.links).map(([name, url]) => (
+            {liveUrl && (
               <a
-                key={name}
-                href={url}
+                href={liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-white hover:animate-move-up [&:not(:hover)]:animate-move-down"
               >
-                {name === "Live" ? (
-                  <Link size={20} />
-                ) : null}
+                <Link size={20} />
               </a>
-            ))}
+            )}
           </div>
         </div>
       </div>
