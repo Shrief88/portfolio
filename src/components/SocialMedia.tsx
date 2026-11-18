@@ -1,30 +1,30 @@
 import { Linkedin, Github, MailIcon } from "lucide-react";
-import data from "@/content/data.json";
+import type { SiteLinks } from "@/lib/sanity/types";
 import { cn } from "@/lib/utils";
 
 type Props = {
   mode: "vertical" | "horizontal";
+  links: SiteLinks;
 };
 
-const SocialLinks = [
-  {
-    icon: <Linkedin size={20} />,
-    name: data.links.Linkedin.name,
-    href: data.links.Linkedin.href,
-  },
-  {
-    icon: <Github size={20} />,
-    name: data.links.Github.name,
-    href: data.links.Github.href,
-  },
-  {
-    icon: <MailIcon size={20} />,
-    name: data.links.Email.name,
-    href: `mailto:${data.links.Email.href}`,
-  },
-];
-
-const SocialMedia = ({ mode }: Props) => {
+const SocialMedia = ({ mode, links }: Props) => {
+  const socialLinks = [
+    {
+      icon: <Linkedin size={20} />,
+      name: "Linkedin",
+      href: links.linkedin,
+    },
+    {
+      icon: <Github size={20} />,
+      name: "Github",
+      href: links.github,
+    },
+    {
+      icon: <MailIcon size={20} />,
+      name: "Email",
+      href: links.email ? `mailto:${links.email}` : undefined,
+    },
+  ].filter((link) => link.href);
 
   return (
     <div
@@ -33,7 +33,7 @@ const SocialMedia = ({ mode }: Props) => {
         mode === "vertical" ? "flex-col" : ""
       )}
     >
-      {SocialLinks.map((link) => (
+      {socialLinks.map((link) => (
         <a
           href={link.href}
           target="_blank"

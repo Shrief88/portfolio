@@ -2,12 +2,15 @@
 
 import { motion } from "framer-motion";
 
-import data from "@/content/data.json";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import useBreakpoint from "@/hooks/useBreakPoint";
+import type { Hero as HeroData } from "@/lib/sanity/types";
 
-const Hero = () => {
-  const { hero } = data;
+type Props = {
+  hero: HeroData;
+};
+
+const Hero = ({ hero }: Props) => {
   // Tailwind "md" breakpoint
   const isMobile = useBreakpoint("(max-width: 768px)");
   const delay = isMobile ? 0.2 : 1;

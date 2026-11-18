@@ -1,0 +1,9 @@
+# LaTeX build output (`npm run resume` copies the PDF into public/)
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.xdv
+*.synctex.gz
+*.pdf

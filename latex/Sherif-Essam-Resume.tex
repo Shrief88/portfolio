@@ -1,0 +1,176 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+% Resume appearance
+\moderncvcolor{blue}
+\moderncvstyle{banking}
+
+
+% Extra space between the name and address.
+\makeatletter
+\patchcmd{\makehead}
+  {\\\addressfont\color{addresscolor}}
+  {\\[2pt]\addressfont\color{addresscolor}}
+  {}{\PackageError{example}{Name spacing patch failed}{}}
+% Extra space between the address and contact links.
+\patchcmd{\makehead}
+  {\flushmakeheaddetails\@firstmakeheaddetailselementtrue\\}
+  {\flushmakeheaddetails\@firstmakeheaddetailselementtrue\\[2pt]}
+  {}{\PackageError{example}{Address spacing patch failed}{}}
+\makeatother
+
+\AtEndPreamble{\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=blue,
+    pdftitle={Sherif Essam Resume},
+    % Keep pdfpagemode=UseNone: this block runs after moderncv's own
+    % \AtEndPreamble (moderncv.cls sets pdfpagemode there), so a FullScreen
+    % value here would win and open every CV in fullscreen presentation mode.
+    pdfpagemode=UseNone,
+}}
+
+% Page margins
+\usepackage{geometry}
+\usepackage[none]{hyphenat}
+\usepackage{ragged2e}
+\usepackage{microtype}
+
+\geometry{
+    left=1.5cm,
+    right=1.5cm,
+    top=1.5cm,
+    bottom=1.5cm
+}
+
+% Set Arial as the font
+\usepackage{fontspec}
+\setsansfont{Arial}
+\setmainfont{Arial}
+
+% Custom name color
+\definecolor{myblue}{HTML}{1E3A8A}
+\colorlet{firstnamecolor}{myblue}
+
+% Customize name font
+\renewcommand*{\namefont}{\fontsize{16}{19}\selectfont\bfseries}
+
+% Personal information
+\name{Sherif Essam El-din Sayed}{}
+\address{Cairo, Egypt}
+\extrainfo{
+  \href{tel:+201099436442}{+201099436442} \thinspace\textbar\thinspace
+  \emaillink{shriefessam1999@gmail.com} \thinspace\textbar\thinspace
+  \href{https://www.linkedin.com/in/sherif-essam-eldin/}{LinkedIn} \thinspace\textbar\thinspace
+  \href{https://github.com/Shrief88}{GitHub} \thinspace\textbar\thinspace
+  \href{https://portfolio-shrief-essams-projects.vercel.app/}{Portfolio}}
+
+\begin{document}
+
+\makecvtitle
+
+% Reduce space below name/header
+\vspace*{-1cm}
+
+\section{Summary}
+
+{
+\justifying
+\setlength{\emergencystretch}{3em}
+
+Full Stack Developer with 3 years of experience building modern web applications using React, Next.js and Node.js. Specialized in data-driven interfaces, dynamic forms, and performance-focused UI development. Experience working on real-world products and delivering scalable, user-centric solutions in remote environments.
+
+\par
+}
+
+\section{Work Experience}
+
+\cventry
+  {Feb 2024 – Apr 2026}
+  {C M Cherry Consulting}
+  {Frontend Developer}
+  {Remote, USA}
+  {}
+  {\normalsize\begin{itemize}
+    \setlength{\itemsep}{1.5pt}
+    \item Helped develop Helix, an interactive visualization platform for biological analysis. 
+    \item Built dynamic data visualization tools to explore large biological datasets. 
+    \item Developed complex, form-driven interfaces for scientific data input. 
+    \item Integrated Amazon Cognito for secure authentication and session management. 
+    \item Designed high-performance data table components for large-scale data operations. 
+    \item Implemented unit and integration tests to improve reliability and code quality.
+  \end{itemize}}
+
+\vspace*{0.2cm}
+
+\cventry
+  {Jun 2025 – Present}
+  {Freelancer}
+  {Full Stack Developer}
+  {}
+  {}
+  {\normalsize\begin{itemize}
+    \setlength{\itemsep}{1.5pt}
+    \item Successfully completed 5 freelance projects with 5-star client ratings. 
+    \item Developed 3 websites with fully functional admin panels: \href{https://silaevent.com/}{Sila}, \href{https://binqirad-resume-demo.vercel.app/}{Bin Qirad}, \href{https://awareone.net}{AwareOne}.
+    \item Engineered and launched the \href{https://apps.apple.com/sa/app/صلة-sila/id6788866397}{Sila mobile app} using React Native, and Supabase.
+    \item Developed and customized a WordPress website: \href{https://iftcunion.org/}{IFTC Union}.
+    \item Communicated directly with clients to gather requirements and ensure timely delivery. 
+  \end{itemize}}
+
+\section{Technical Skills}
+\begin{itemize}
+\setlength{\itemsep}{1.5pt}
+\item \textbf{Frontend}: React, Next.js, TypeScript, JavaScript, HTML5, CSS3.
+\item \textbf{UI and state}: Redux, Mantine, TanStack Query, Tailwind CSS.
+\item \textbf{Backend}: Node.js, Express, Supabase, REST APIs, Sanity.
+\item \textbf{Testing and tools}: Vitest, React Testing Library, Git, GitHub, GitLab, Docker.
+\end{itemize}
+
+\section{Education}
+
+\cventry
+  {Sep 2025 – Present}
+  {Computer Science Diploma}
+  {Cairo University}
+  {Cairo, Egypt}
+  {}
+  {}
+
+\vspace*{0.2cm}
+
+\cventry
+  {Sep 2017 – Jul 2022}
+  {B.Eng. in Electrical Engineering}
+  {Ain Shams University}
+  {Cairo, Egypt}
+  {}
+  {}
+
+\section{Certificates}
+
+\cventry
+  {Sep 2022}
+  {Data Structures and Algorithms Specialization}
+  {University of California San Diego}
+  {}
+  {}
+  {}
+
+\vspace*{0.2cm}
+
+\cventry
+  {Mar 2023}
+  {Full Stack JavaScript Developer Nanodegree}
+  {Udacity}
+  {}
+  {}
+  {}
+
+\section{Languages}
+\noindent\begin{tabular}{@{}p{.5\linewidth}@{}p{.5\linewidth}@{}}
+\textbf{Arabic}: Native Speaker. & \textbf{English}: Professional.
+\end{tabular}
+
+
+\end{document}

@@ -6,20 +6,26 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "resume": "cd latex && latexmk -xelatex -interaction=nonstopmode -halt-on-error Sherif-Essam-Resume.tex && cp Sherif-Essam-Resume.pdf ../public/Sherif_Essam_Resume.pdf"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.6",
     "@radix-ui/react-slot": "^1.1.2",
     "@radix-ui/react-tabs": "^1.1.3",
+    "@sanity/client": "^7.28.0",
+    "@sanity/image-url": "^2.2.0",
+    "@sanity/vision": "^4.22.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.5.0",
     "lucide-react": "^0.482.0",
     "next": "15.2.8",
-    "plaiceholder": "^3.0.0",
+    "next-sanity": "^11.6.13",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "sanity": "^4.22.1",
+    "styled-components": "^6.6.0",
     "swiper": "^12.1.3",
     "tailwind-merge": "^3.0.2",
     "tailwindcss-animate": "^1.0.7"
@@ -33,6 +39,7 @@
     "eslint": "^9",
     "eslint-config-next": "15.2.2",
     "tailwindcss": "^4",
+    "tsx": "^4.23.15",
     "typescript": "^5"
   }
 }
