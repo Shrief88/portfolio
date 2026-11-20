@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Session logs
 
-Only once the whole task the user asked for is finished, ask once whether they want a session log saved. Do not ask after intermediate steps or on every message. If they agree, follow the `/log` command in `.claude/commands/log.md` (the user can also run `/log [topic]` themselves). Don't read past logs unless the user asks.
+Only once the whole task the user asked for is finished, ask once whether they want a session log saved. Do not ask after intermediate steps or on every message. If they agree, follow the user-level `/log` skill (`~/.claude/skills/log/SKILL.md`) (the user can also run `/log [topic]` themselves). Don't read past logs unless the user asks.
 
 ## Commands
 
